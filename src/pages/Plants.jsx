@@ -37,35 +37,34 @@ export default function Plants() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <section className="relative pt-24 pb-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-50 to-cream-50" />
-        <div className="absolute top-10 right-0 w-96 h-96 bg-green-200/20 rounded-full blur-3xl" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4"
-          >
-            Program Kami
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl font-bold text-gray-900 font-display"
-          >
-            Program Pengelolaan Sampah
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-4 text-gray-500 max-w-2xl mx-auto"
-          >
-            Jelajahi {plants.length} program pengelolaan sampah yang bisa diterapkan 
-            untuk mewujudkan lingkungan yang bersih dan berkelanjutan.
-          </motion.p>
+      <section className="relative pt-28 pb-12 bg-[#F4F6F3] border-b border-stone-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-2 text-emerald-800 font-semibold text-xs tracking-wider uppercase mb-3"
+            >
+              <Recycle className="w-4 h-4 text-emerald-600" />
+              <span>Daftar Kegiatan & Panduan</span>
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl sm:text-5xl font-bold text-slate-900 font-display leading-tight"
+            >
+              Program Green Village
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mt-3 text-slate-600 text-lg leading-relaxed"
+            >
+              Temukan berbagai panduan dan program kerja lingkungan yang dapat diterapkan di desa kita.
+            </motion.p>
+          </div>
         </div>
       </section>
 

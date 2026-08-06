@@ -37,15 +37,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/25 group-hover:shadow-green-500/40 transition-shadow duration-300">
-              <Recycle className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 bg-emerald-900 rounded-xl flex items-center justify-center text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+              <Recycle className="w-5 h-5" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-green-800 leading-tight">
+              <span className="text-lg font-bold text-slate-900 leading-tight">
                 Green Village
               </span>
-              <span className="text-[10px] text-green-600/70 font-medium tracking-wider uppercase leading-tight hidden sm:block">
+              <span className="text-[10px] text-emerald-800 font-semibold tracking-wider uppercase leading-tight hidden sm:block">
                 Desa Berkelanjutan
               </span>
             </div>
@@ -59,10 +59,10 @@ export default function Navbar() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                  `relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 ${
                     isActive
-                      ? 'text-green-700 bg-green-50'
-                      : 'text-gray-600 hover:text-green-700 hover:bg-green-50/50'
+                      ? 'text-white bg-emerald-800 shadow-sm'
+                      : 'text-slate-700 hover:text-emerald-900 hover:bg-stone-100'
                   }`
                 }
               >
@@ -100,10 +100,10 @@ export default function Navbar() {
                   to={to}
                   end={to === '/'}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'text-green-700 bg-green-50'
-                        : 'text-gray-600 hover:text-green-700 hover:bg-green-50/50'
+                        ? 'text-white bg-emerald-800'
+                        : 'text-slate-700 hover:text-emerald-900 hover:bg-stone-100'
                     }`
                   }
                 >

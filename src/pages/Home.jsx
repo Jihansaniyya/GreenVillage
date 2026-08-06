@@ -43,50 +43,49 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pt-28 sm:pb-24 w-full">
           <div className="max-w-2xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6"
+              className="flex items-center gap-2 text-emerald-300 font-semibold text-xs tracking-wider uppercase mb-4"
             >
-              <Recycle className="w-4 h-4 text-green-300" />
-              <span className="text-sm text-green-100 font-medium">Desa Bersih, Sehat & Berkelanjutan</span>
+              <Recycle className="w-4 h-4 text-emerald-400" />
+              <span>Desa Bersih, Sehat & Berkelanjutan</span>
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight font-display"
             >
               Green Village
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-6 text-lg text-green-100/80 leading-relaxed max-w-xl"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-5 text-lg text-emerald-100/90 leading-relaxed max-w-xl"
             >
               Bersama-sama kita jaga desa kita supaya tetap bersih, sehat, dan nyaman
               untuk ditinggali anak cucu kita nanti.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8 flex flex-col sm:flex-row gap-3.5"
             >
               <Link
                 to="/plants"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-2xl shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-xl shadow-sm transition-all duration-200"
               >
-                Program Lainnya
-                <ArrowRight className="w-5 h-5" />
+                Program Pengelolaan Sampah
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all duration-200 backdrop-blur-sm"
               >
                 Selengkapnya
               </Link>
@@ -97,29 +96,29 @@ export default function Home() {
         {/* Bottom wave */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none -mb-px z-10">
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
-            <path d="M0 40L60 36.7C120 33.3 240 26.7 360 28.3C480 30 600 40 720 43.3C840 46.7 960 43.3 1080 38.3C1200 33.3 1320 26.7 1380 23.3L1440 20V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="#fefdfb" />
+            <path d="M0 40L60 36.7C120 33.3 240 26.7 360 28.3C480 30 600 40 720 43.3C840 46.7 960 43.3 1080 38.3C1200 33.3 1320 26.7 1380 23.3L1440 20V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="#F4F6F3" />
           </svg>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-cream-50">
+      <section className="py-16 bg-[#F4F6F3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto gap-6">
-            {stats.map(({ icon: Icon, label, value, color }, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto gap-6">
+            {stats.map(({ icon: Icon, label, value }, i) => (
               <motion.div
                 key={label}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-green-100/50 text-center group"
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/80 text-center flex flex-col items-center justify-center"
               >
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${color} shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-emerald-800 text-white flex items-center justify-center mb-3">
+                  <Icon className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 font-display">{value}</div>
-                <div className="text-sm text-gray-500 mt-1">{label}</div>
+                <div className="text-3xl font-bold text-slate-900 font-display">{value}</div>
+                <div className="text-sm font-medium text-slate-500 mt-1">{label}</div>
               </motion.div>
             ))}
           </div>
@@ -287,32 +286,28 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-[#F4F6F3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 rounded-3xl p-8 sm:p-12 lg:p-16 text-center"
+            transition={{ duration: 0.5 }}
+            className="bg-emerald-950 rounded-3xl p-8 sm:p-12 lg:p-14 text-center border border-emerald-900"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-400/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
-
-            <div className="relative z-10">
+            <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
                 Jelajahi Program Green Village
               </h2>
-              <p className="mt-4 text-green-100/80 max-w-xl mx-auto">
-                Temukan {plants.length}+ program yang bisa diterapkan
-                untuk mewujudkan desa yang bersih, sehat, dan berkelanjutan.
+              <p className="mt-3 text-emerald-200/80 leading-relaxed text-base">
+                Temukan berbagai panduan dan program yang dapat diterapkan untuk mewujudkan desa yang bersih, sehat, dan berkelanjutan.
               </p>
               <Link
                 to="/plants"
-                className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-white text-green-700 font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-white text-emerald-950 font-semibold rounded-xl shadow-sm hover:bg-emerald-50 transition-all duration-200"
               >
                 Lihat Semua Program
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </motion.div>

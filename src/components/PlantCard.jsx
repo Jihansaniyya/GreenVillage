@@ -12,7 +12,7 @@ export default function PlantCard({ plant, index = 0 }) {
     >
       <Link
         to={`/plants/${plant.slug}`}
-        className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-green-900/10 transition-all duration-500 border border-green-100/50"
+        className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-stone-200/80"
       >
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/3]">
@@ -20,13 +20,12 @@ export default function PlantCard({ plant, index = 0 }) {
             src={plant.image}
             alt={plant.name}
             loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
           {/* Category Badge */}
           <div className="absolute top-3 left-3">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur-sm text-green-700 shadow-sm">
+            <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-950/80 backdrop-blur-sm text-white">
               {plant.category}
             </span>
           </div>
@@ -34,20 +33,22 @@ export default function PlantCard({ plant, index = 0 }) {
 
         {/* Content */}
         <div className="p-5">
-          <h3 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors duration-300">
+          <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-800 transition-colors duration-200">
             {plant.name}
           </h3>
-          <p className="text-sm text-green-600/80 italic mt-0.5">
-            {plant.scientificName}
-          </p>
-          <p className="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">
+          {plant.scientificName && (
+            <p className="text-xs text-slate-500 italic mt-0.5">
+              {plant.scientificName}
+            </p>
+          )}
+          <p className="text-sm text-slate-600 mt-2 line-clamp-2 leading-relaxed">
             {plant.description}
           </p>
 
           {/* CTA */}
-          <div className="flex items-center gap-1 mt-4 text-sm font-medium text-green-600 group-hover:text-green-700">
+          <div className="flex items-center gap-1 mt-4 text-sm font-semibold text-emerald-800 group-hover:text-emerald-900">
             <span>Lihat Detail</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
         </div>
       </Link>
