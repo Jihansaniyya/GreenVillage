@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Recycle, SearchX } from 'lucide-react';
 import { usePlants } from '../hooks/usePlants';
+import { useDebounce } from '../hooks/useDebounce';
 import { filterPlants } from '../utils/helpers';
 import PlantCard from '../components/PlantCard';
 import SearchBar from '../components/SearchBar';
@@ -13,6 +14,7 @@ export default function Plants() {
   const { plants, loading } = usePlants();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 300);
   const [category, setCategory] = useState(searchParams.get('category') || '');
   const [sortAZ, setSortAZ] = useState(false);
 
@@ -30,7 +32,7 @@ export default function Plants() {
     }
   };
 
-  const filtered = filterPlants(plants, { search, category, sortAZ });
+  const filtered = filterPlants(plants, { search: debouncedSearch, category, sortAZ });
 
   return (
     <div className="min-h-screen">
@@ -93,8 +95,8 @@ export default function Plants() {
                   {category && (
                     <span> dalam kategori <span className="font-semibold text-green-700">{category}</span></span>
                   )}
-                  {search && (
-                    <span> untuk "<span className="font-semibold text-green-700">{search}</span>"</span>
+                  {debouncedSearch && (
+                    <span> untuk "<span className="font-semibold text-green-700">{debouncedSearch}</span>"</span>
                   )}
                 </p>
               </div>

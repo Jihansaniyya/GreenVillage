@@ -1,9 +1,13 @@
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../components/Layout';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Plants from '../pages/Plants';
-import PlantDetail from '../pages/PlantDetail';
+
+// Route-based code splitting (lazy chunking)
+const Home = lazy(() => import('../pages/Home'));
+const About = lazy(() => import('../pages/About'));
+const Plants = lazy(() => import('../pages/Plants'));
+const PlantDetail = lazy(() => import('../pages/PlantDetail'));
+const Contact = lazy(() => import('../pages/Contact'));
 
 const router = createBrowserRouter([
   {
@@ -14,6 +18,7 @@ const router = createBrowserRouter([
       { path: 'about', element: <About /> },
       { path: 'plants', element: <Plants /> },
       { path: 'plants/:slug', element: <PlantDetail /> },
+      { path: 'contact', element: <Contact /> },
     ],
   },
 ]);

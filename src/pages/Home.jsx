@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Recycle, FolderTree, ArrowRight, Trash2, Leaf, FileCheck, Heart } from 'lucide-react';
+import { Recycle, FolderTree, ArrowRight, Trash2, Leaf, Heart } from 'lucide-react';
 import { usePlants } from '../hooks/usePlants';
 import { getCategories } from '../utils/helpers';
 
@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen lg:h-screen flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <img
@@ -45,7 +45,7 @@ export default function Home() {
         <div className="absolute top-20 right-10 w-72 h-72 bg-green-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pt-28 sm:pb-24 w-full">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 text-lg text-green-100/80 leading-relaxed max-w-xl"
             >
-              Mewujudkan Desa Bersih, Sehat, dan Berkelanjutan melalui Pengelolaan Sampah 
+              Mewujudkan Desa Bersih, Sehat, dan Berkelanjutan melalui Pengelolaan Sampah
               yang terpadu, berbasis masyarakat, dan berwawasan lingkungan.
             </motion.p>
 
@@ -100,9 +100,9 @@ export default function Home() {
         </div>
 
         {/* Bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 40L60 36.7C120 33.3 240 26.7 360 28.3C480 30 600 40 720 43.3C840 46.7 960 43.3 1080 38.3C1200 33.3 1320 26.7 1380 23.3L1440 20V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="#fefdfb"/>
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none -mb-px z-10">
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+            <path d="M0 40L60 36.7C120 33.3 240 26.7 360 28.3C480 30 600 40 720 43.3C840 46.7 960 43.3 1080 38.3C1200 33.3 1320 26.7 1380 23.3L1440 20V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="#fefdfb" />
           </svg>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto gap-6">
             {stats.map(({ icon: Icon, label, value, color }, i) => (
               <motion.div
                 key={label}
@@ -147,7 +147,7 @@ export default function Home() {
               Program & Layanan Kami
             </h2>
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Green Village menyediakan program pengelolaan sampah terpadu beserta edukasi 
+              Green Village menyediakan program pengelolaan sampah terpadu beserta edukasi
               yang mudah dipahami untuk seluruh lapisan masyarakat desa.
             </p>
           </motion.div>
@@ -185,13 +185,13 @@ export default function Home() {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-400/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
-            
+
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
                 Jelajahi Program Pengelolaan Sampah
               </h2>
               <p className="mt-4 text-green-100/80 max-w-xl mx-auto">
-                Temukan {plants.length}+ program pengelolaan sampah yang bisa diterapkan 
+                Temukan {plants.length}+ program pengelolaan sampah yang bisa diterapkan
                 untuk mewujudkan desa yang bersih dan berkelanjutan.
               </p>
               <Link
