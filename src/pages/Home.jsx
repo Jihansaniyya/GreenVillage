@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Recycle, FolderTree, ArrowRight, Trash2, Leaf, Heart } from 'lucide-react';
+import { Recycle, FolderTree, ArrowRight } from 'lucide-react';
 import { usePlants } from '../hooks/usePlants';
 import { getCategories } from '../utils/helpers';
 
@@ -15,16 +15,11 @@ export default function Home() {
   const categories = getCategories(plants);
 
   const stats = [
-    { icon: Recycle, label: 'Program Sampah', value: plants.length, color: 'from-green-500 to-emerald-600' },
+    { icon: Recycle, label: 'Program Desa', value: plants.length, color: 'from-green-500 to-emerald-600' },
     { icon: FolderTree, label: 'Kategori', value: categories.length, color: 'from-teal-500 to-green-600' },
   ];
 
-  const features = [
-    { icon: Trash2, title: 'Pemilahan Sampah', desc: 'Edukasi dan panduan pemilahan sampah dari sumber untuk pengelolaan yang lebih efektif.' },
-    { icon: Recycle, title: 'Bank Sampah', desc: 'Sistem tabungan sampah yang memberikan nilai ekonomi bagi masyarakat desa.' },
-    { icon: Leaf, title: 'Komposting', desc: 'Pengolahan sampah organik menjadi pupuk kompos untuk mendukung pertanian desa.' },
-    { icon: Heart, title: 'Untuk Masyarakat', desc: 'Green Village hadir untuk mewujudkan lingkungan desa yang bersih, sehat, dan berkelanjutan.' },
-  ];
+
 
   return (
     <div className="min-h-screen">
@@ -72,8 +67,8 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 text-lg text-green-100/80 leading-relaxed max-w-xl"
             >
-              Mewujudkan Desa Bersih, Sehat, dan Berkelanjutan melalui Pengelolaan Sampah
-              yang terpadu, berbasis masyarakat, dan berwawasan lingkungan.
+              Mewujudkan Desa Bersih, Sehat, dan Berkelanjutan melalui berbagai program
+              pemberdayaan masyarakat dan pengelolaan lingkungan yang terpadu.
             </motion.p>
 
             <motion.div
@@ -131,47 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-cream-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            {...fadeInUp}
-            whileInView={fadeInUp.animate}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
-              Kenapa Green Village?
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-display">
-              Program & Layanan Kami
-            </h2>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Green Village menyediakan program pengelolaan sampah terpadu beserta edukasi
-              yang mudah dipahami untuk seluruh lapisan masyarakat desa.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map(({ icon: Icon, title, desc }, i) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg hover:shadow-green-900/5 transition-all duration-300 border border-green-100/50 group hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors duration-300">
-                  <Icon className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-cream-50">
@@ -188,11 +143,11 @@ export default function Home() {
 
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
-                Jelajahi Program Pengelolaan Sampah
+                Jelajahi Program Green Village
               </h2>
               <p className="mt-4 text-green-100/80 max-w-xl mx-auto">
-                Temukan {plants.length}+ program pengelolaan sampah yang bisa diterapkan
-                untuk mewujudkan desa yang bersih dan berkelanjutan.
+                Temukan {plants.length}+ program yang bisa diterapkan
+                untuk mewujudkan desa yang bersih, sehat, dan berkelanjutan.
               </p>
               <Link
                 to="/plants"
