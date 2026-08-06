@@ -67,8 +67,8 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 text-lg text-green-100/80 leading-relaxed max-w-xl"
             >
-              Mewujudkan Desa Bersih, Sehat, dan Berkelanjutan melalui berbagai program
-              pemberdayaan masyarakat dan pengelolaan lingkungan yang terpadu.
+              Bersama-sama kita jaga desa kita supaya tetap bersih, sehat, dan nyaman
+              untuk ditinggali anak cucu kita nanti.
             </motion.p>
 
             <motion.div
@@ -142,7 +142,7 @@ export default function Home() {
               Tahukah Kamu?
             </h2>
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Fakta-fakta menarik seputar sampah dan lingkungan yang perlu kamu ketahui.
+              Ternyata soal sampah dan lingkungan itu banyak hal yang jarang orang tahu, lho.
             </p>
           </motion.div>
 
@@ -151,42 +151,42 @@ export default function Home() {
               {
                 emoji: '🛍️',
                 highlight: '500 Tahun',
-                desc: 'Waktu yang dibutuhkan satu kantong plastik untuk terurai di alam. Yuk, beralih ke tas belanja kain!',
+                desc: 'Bayangin, satu kantong plastik aja butuh waktu 500 tahun baru hancur. Makanya mending pakai tas kain aja, ya!',
                 color: 'from-red-500 to-orange-500',
                 bg: 'from-red-50 to-orange-50',
               },
               {
                 emoji: '🗑️',
                 highlight: '64 Juta Ton',
-                desc: 'Jumlah sampah yang dihasilkan Indonesia setiap tahunnya. Pemilahan dari rumah bisa mengurangi volume sampah secara signifikan.',
+                desc: 'Indonesia menghasilkan sampah sebanyak itu tiap tahun. Kalau dari rumah sudah dipilah, sampah ke TPA bisa jauh berkurang.',
                 color: 'from-amber-500 to-yellow-500',
                 bg: 'from-amber-50 to-yellow-50',
               },
               {
                 emoji: '♻️',
                 highlight: '60%',
-                desc: 'Sampah rumah tangga di Indonesia adalah sampah organik yang bisa diolah menjadi kompos atau pupuk cair (POC).',
+                desc: 'Lebih dari setengah sampah rumah tangga itu sampah organik. Sisa sayur, kulit buah, nasi basi — semua bisa jadi kompos atau POC.',
                 color: 'from-green-500 to-emerald-500',
                 bg: 'from-green-50 to-emerald-50',
               },
               {
                 emoji: '💧',
                 highlight: '1 Liter',
-                desc: 'Minyak jelantah yang dibuang sembarangan bisa mencemari hingga 1 juta liter air bersih.',
+                desc: 'Cuma 1 liter minyak jelantah yang dibuang ke got bisa bikin 1 juta liter air tercemar. Serem kan?',
                 color: 'from-blue-500 to-cyan-500',
                 bg: 'from-blue-50 to-cyan-50',
               },
               {
                 emoji: '🌱',
                 highlight: '2-3 Bulan',
-                desc: 'Waktu yang dibutuhkan sampah organik untuk menjadi kompos siap pakai jika diolah dengan benar.',
+                desc: 'Sampah organik cuma perlu 2-3 bulan buat jadi kompos. Lumayan banget buat tanaman di pekarangan rumah.',
                 color: 'from-emerald-500 to-teal-500',
                 bg: 'from-emerald-50 to-teal-50',
               },
               {
                 emoji: '🔋',
                 highlight: '1 Baterai',
-                desc: 'Satu baterai bekas yang dibuang sembarangan bisa mencemari tanah seluas 1 meter persegi selama 50 tahun.',
+                desc: 'Satu baterai bekas aja bisa bikin tanah seluas 1 meter persegi tercemar selama 50 tahun. Jangan buang sembarangan!',
                 color: 'from-purple-500 to-indigo-500',
                 bg: 'from-purple-50 to-indigo-50',
               },
@@ -226,7 +226,7 @@ export default function Home() {
               Tips Harian untuk Warga
             </h2>
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Langkah-langkah sederhana yang bisa dilakukan setiap hari untuk menjaga lingkungan desa tetap bersih dan sehat.
+              Hal-hal kecil yang kalau rutin dilakukan, dampaknya besar banget buat lingkungan kita.
             </p>
           </motion.div>
 
@@ -235,49 +235,49 @@ export default function Home() {
               {
                 num: '01',
                 title: 'Pilah Sampah dari Rumah',
-                desc: 'Sediakan minimal 2 tempat sampah di rumah: untuk sampah organik (sisa makanan, daun) dan anorganik (plastik, kertas, botol).',
+                desc: 'Cukup siapin 2 tempat sampah di rumah — satu buat sisa makanan dan daun, satu lagi buat plastik, kertas, dan botol.',
                 icon: '🗂️',
               },
               {
                 num: '02',
                 title: 'Bawa Tas Belanja Sendiri',
-                desc: 'Biasakan membawa totebag atau tas kain saat berbelanja ke warung atau pasar untuk mengurangi penggunaan plastik.',
+                desc: 'Kalau mau ke warung atau pasar, bawa tas kain dari rumah. Selain hemat, juga ngurangin plastik.',
                 icon: '🛍️',
               },
               {
                 num: '03',
                 title: 'Olah Sisa Dapur Jadi Kompos',
-                desc: 'Kumpulkan sisa sayuran, kulit buah, dan nasi basi untuk dijadikan kompos atau pupuk organik cair (POC).',
+                desc: 'Sisa sayur, kulit buah, nasi basi jangan langsung dibuang. Kumpulin, bisa jadi kompos atau pupuk cair.',
                 icon: '🌿',
               },
               {
                 num: '04',
                 title: 'Hemat Air Bersih',
-                desc: 'Gunakan air secukupnya saat mencuci dan mandi. Tampung air hujan untuk menyiram tanaman.',
+                desc: 'Pakai air secukupnya aja. Kalau hujan, tampung airnya buat nyiram tanaman.',
                 icon: '💧',
               },
               {
                 num: '05',
                 title: 'Buang Minyak Jelantah dengan Benar',
-                desc: 'Jangan buang minyak bekas ke saluran air. Kumpulkan dan setor ke bank sampah atau olah jadi sabun.',
+                desc: 'Minyak bekas goreng jangan dibuang ke got. Bisa dikumpulin dan disetor ke bank sampah, atau diolah jadi sabun.',
                 icon: '🫗',
               },
               {
                 num: '06',
                 title: 'Manfaatkan Barang Bekas',
-                desc: 'Botol plastik bisa jadi pot tanaman, karton bekas jadi tempat penyimpanan. Kreativitas mengurangi sampah!',
+                desc: 'Botol bekas bisa jadi pot, karton bisa jadi tempat simpan barang. Tinggal kreatif aja!',
                 icon: '♻️',
               },
               {
                 num: '07',
                 title: 'Jaga Kebersihan Selokan',
-                desc: 'Rutin bersihkan selokan dan saluran air di sekitar rumah agar tidak tersumbat sampah dan mencegah banjir.',
+                desc: 'Sempetin bersihin selokan depan rumah biar nggak mampet dan nggak jadi sarang nyamuk.',
                 icon: '🏠',
               },
               {
                 num: '08',
                 title: 'Ajak Keluarga & Tetangga',
-                desc: 'Lingkungan bersih dimulai dari kesadaran bersama. Ajak keluarga dan tetangga untuk peduli kebersihan.',
+                desc: 'Ngajak tetangga dan keluarga buat bareng-bareng jaga kebersihan itu penting. Kan nggak seru kalau sendirian.',
                 icon: '🤝',
               },
             ].map(({ num, title, desc, icon }, i) => (
