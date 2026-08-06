@@ -1,24 +1,7 @@
 import { motion } from 'framer-motion';
 import { Trash2, Recycle, ShoppingBag, Droplets, Leaf, Sparkles, Target, Users, HeartHandshake, Home, Bath, UtensilsCrossed, Apple, Bug, Wind, HandHeart } from 'lucide-react';
-import Gallery from '../components/Gallery';
 
-const galleryImages = [
-  'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=400&fit=crop',
-];
 
-const galleryCaptions = [
-  'Kegiatan pengelolaan sampah desa',
-  'Pemilahan sampah rumah tangga',
-  'Penghijauan lingkungan desa',
-  'Kerajinan daur ulang warga',
-  'Ecobrick untuk bangunan ramah lingkungan',
-  'Komposting bersama masyarakat',
-];
 
 const greenVillagePractices = [
   {
@@ -355,20 +338,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-16 bg-cream-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div {...fadeInUp} className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
-              Dokumentasi
-            </span>
-            <h2 className="text-3xl font-bold text-gray-900 font-display">Galeri Foto</h2>
-            <p className="mt-4 text-gray-500">Dokumentasi kegiatan pengelolaan sampah dan program Green Village.</p>
-          </motion.div>
-
-          <Gallery images={galleryImages} captions={galleryCaptions} />
-        </div>
-      </section>
     </div>
   );
 }
+
