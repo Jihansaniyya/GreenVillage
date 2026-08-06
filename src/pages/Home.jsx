@@ -81,14 +81,14 @@ export default function Home() {
                 to="/plants"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-2xl shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Lihat Program Kami
+                Program Lainnya
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 transition-all duration-300"
               >
-                Tentang Kami
+                Selengkapnya
               </Link>
             </motion.div>
           </div>
