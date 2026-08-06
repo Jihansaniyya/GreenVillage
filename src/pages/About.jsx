@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Trash2, Recycle, ShoppingBag, Droplets, Leaf, Sparkles, Target, Users, HeartHandshake, Home, Bath, UtensilsCrossed, Apple, Bug, Wind, HandHeart } from 'lucide-react';
+import { Trash2, Recycle, ShoppingBag, Droplets, Leaf, Sparkles, Target, Users, HeartHandshake, Home, Bath, Apple, Bug, Wind, HandHeart } from 'lucide-react';
 
 
 
@@ -77,54 +77,54 @@ const manfaat = [
 
 const phbsItems = [
   {
+    icon: HeartHandshake,
+    title: 'Persalinan Ditolong oleh Tenaga Kesehatan',
+    desc: 'Memastikan proses persalinan dibantu oleh dokter, bidan, atau tenaga medis profesional untuk keselamatan ibu dan bayi.',
+  },
+  {
     icon: Bath,
-    title: 'Mencuci Tangan dengan Sabun',
-    desc: 'Membiasakan mencuci tangan pakai sabun dengan air mengalir sebelum makan, setelah BAB, dan setelah memegang sampah.',
+    title: 'Memberi Bayi ASI Eksklusif',
+    desc: 'Memberikan air susu ibu (ASI) saja tanpa makanan atau minuman lain kepada bayi sejak lahir hingga usia 6 bulan.',
+  },
+  {
+    icon: Target,
+    title: 'Menimbang Bayi dan Balita Secara Berkala',
+    desc: 'Melakukan pemantauan pertumbuhan anak setiap bulan di Posyandu atau fasilitas kesehatan terdekat.',
   },
   {
     icon: Droplets,
     title: 'Menggunakan Air Bersih',
-    desc: 'Menggunakan air bersih untuk kebutuhan sehari-hari seperti memasak, minum, mandi, dan mencuci.',
+    desc: 'Memanfaatkan air bersih yang layak untuk kebutuhan sehari-hari seperti minum, masak, mandi, dan mencuci.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Mencuci Tangan dengan Sabun',
+    desc: 'Membiasakan cuci tangan sebelum makan, sesudah buang air besar, dan setelah memegang benda kotor.',
   },
   {
     icon: Home,
     title: 'Menggunakan Jamban Sehat',
-    desc: 'Buang air besar dan kecil di jamban yang memenuhi syarat kesehatan, tidak di sembarang tempat.',
-  },
-  {
-    icon: Trash2,
-    title: 'Membuang Sampah pada Tempatnya',
-    desc: 'Menyediakan tempat sampah di rumah dan membiasakan seluruh anggota keluarga untuk membuang sampah pada tempatnya.',
-  },
-  {
-    icon: Wind,
-    title: 'Menjaga Sirkulasi Udara Rumah',
-    desc: 'Memastikan ventilasi rumah baik agar udara bersih dan segar dapat masuk, mencegah penyakit pernapasan.',
-  },
-  {
-    icon: UtensilsCrossed,
-    title: 'Makan Buah & Sayur Setiap Hari',
-    desc: 'Mengonsumsi buah dan sayur setiap hari untuk memenuhi kebutuhan gizi dan meningkatkan daya tahan tubuh.',
-  },
-  {
-    icon: Apple,
-    title: 'Menjaga Kebersihan Makanan',
-    desc: 'Menutup makanan dengan baik, mencuci bahan makanan sebelum dimasak, dan menjaga kebersihan dapur.',
+    desc: 'Menggunakan fasilitas jamban/kakus yang memenuhi standar kesehatan untuk mencegah penyebaran penyakit.',
   },
   {
     icon: Bug,
-    title: 'Memberantas Jentik Nyamuk',
-    desc: 'Melakukan 3M Plus (Menguras, Menutup, Mengubur) untuk mencegah perkembangbiakan nyamuk penyebab DBD.',
+    title: 'Memberantas Jentik Nyamuk di Rumah (3M Plus)',
+    desc: 'Melakukan kegiatan 3M Plus (Menguras, Menutup, Mengubur) secara rutin untuk mencegah demam berdarah.',
+  },
+  {
+    icon: Apple,
+    title: 'Makan Buah dan Sayur Setiap Hari',
+    desc: 'Mencukupi kebutuhan nutrisi dan vitamin harian dengan mengonsumsi buah dan sayuran secara teratur.',
+  },
+  {
+    icon: Wind,
+    title: 'Melakukan Aktivitas Fisik Setiap Hari',
+    desc: 'Berolahraga atau melakukan aktivitas gerak tubuh minimal 30 menit setiap harinya untuk menjaga kebugaran.',
   },
   {
     icon: HandHeart,
     title: 'Tidak Merokok di Dalam Rumah',
-    desc: 'Menjaga kualitas udara dalam rumah dengan tidak merokok di dalam ruangan demi kesehatan seluruh anggota keluarga.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Menjaga Kebersihan Rumah & Lingkungan',
-    desc: 'Rutin membersihkan rumah, halaman, dan saluran air untuk menciptakan lingkungan yang bersih dan sehat.',
+    desc: 'Menjaga lingkungan rumah bebas dari asap rokok demi melindungi anggota keluarga dari dampak perokok pasif.',
   },
 ];
 

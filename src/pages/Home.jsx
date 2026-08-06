@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Recycle, FolderTree, Users, ArrowRight, Trash2, Leaf, FileCheck, Heart } from 'lucide-react';
+import { Recycle, FolderTree, ArrowRight, Trash2, Leaf, FileCheck, Heart } from 'lucide-react';
 import { usePlants } from '../hooks/usePlants';
 import { getCategories } from '../utils/helpers';
 
@@ -17,7 +17,6 @@ export default function Home() {
   const stats = [
     { icon: Recycle, label: 'Program Sampah', value: plants.length, color: 'from-green-500 to-emerald-600' },
     { icon: FolderTree, label: 'Kategori', value: categories.length, color: 'from-teal-500 to-green-600' },
-    { icon: Users, label: 'Warga Terlibat', value: '250+', color: 'from-emerald-500 to-teal-600' },
   ];
 
   const features = [
@@ -112,7 +111,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {stats.map(({ icon: Icon, label, value, color }, i) => (
               <motion.div
                 key={label}
