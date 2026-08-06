@@ -64,7 +64,6 @@ export default function Home() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight font-display"
             >
               Green Village
-              <span className="block text-green-300 mt-2">Pengelolaan Sampah Desa</span>
             </motion.h1>
 
             <motion.p
