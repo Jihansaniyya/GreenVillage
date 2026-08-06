@@ -75,9 +75,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-green-800/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-green-300/60 text-sm flex items-center gap-1">
-            © 2026 Green Village Tegalsari Timur. Dibuat dengan
-            <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400" />
-            untuk masyarakat.
+            © 2026 Green Village Tegalsari Timur. Dibuat oleh admin cantik untuk masyarakat.
           </p>
           <button
             onClick={scrollToTop}
