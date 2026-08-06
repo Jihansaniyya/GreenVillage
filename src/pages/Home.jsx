@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Recycle, FolderTree, ArrowRight } from 'lucide-react';
+import { Recycle, FolderTree, ArrowRight, Lightbulb, CheckCircle2, Droplets, Trash2, Leaf, ShieldAlert, Sparkles } from 'lucide-react';
 import { usePlants } from '../hooks/usePlants';
 import { getCategories } from '../utils/helpers';
 
@@ -127,83 +127,76 @@ export default function Home() {
       </section>
 
       {/* Tahukah Kamu Section */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-[#F4F6F3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             {...fadeInUp}
             whileInView={fadeInUp.animate}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="mb-12 max-w-xl"
           >
-            <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-medium mb-4">
-              💡 Fakta Menarik
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-display">
+            <div className="flex items-center gap-2 text-emerald-800 font-semibold text-sm tracking-wide uppercase mb-2">
+              <Lightbulb className="w-4 h-4 text-emerald-600" />
+              <span>Info & Informasi Lingkungan</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display">
               Tahukah Kamu?
             </h2>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+            <p className="mt-3 text-slate-600 text-base leading-relaxed">
               Ternyata soal sampah dan lingkungan itu banyak hal yang jarang orang tahu, lho.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                emoji: '🛍️',
+                icon: Trash2,
                 highlight: '500 Tahun',
                 desc: 'Bayangin, satu kantong plastik aja butuh waktu 500 tahun baru hancur. Makanya mending pakai tas kain aja, ya!',
-                color: 'from-red-500 to-orange-500',
-                bg: 'from-red-50 to-orange-50',
               },
               {
-                emoji: '🗑️',
+                icon: ShieldAlert,
                 highlight: '64 Juta Ton',
                 desc: 'Indonesia menghasilkan sampah sebanyak itu tiap tahun. Kalau dari rumah sudah dipilah, sampah ke TPA bisa jauh berkurang.',
-                color: 'from-amber-500 to-yellow-500',
-                bg: 'from-amber-50 to-yellow-50',
               },
               {
-                emoji: '♻️',
-                highlight: '60%',
+                icon: Recycle,
+                highlight: '60% Organik',
                 desc: 'Lebih dari setengah sampah rumah tangga itu sampah organik. Sisa sayur, kulit buah, nasi basi — semua bisa jadi kompos atau POC.',
-                color: 'from-green-500 to-emerald-500',
-                bg: 'from-green-50 to-emerald-50',
               },
               {
-                emoji: '💧',
-                highlight: '1 Liter',
+                icon: Droplets,
+                highlight: '1 Liter Jelantah',
                 desc: 'Cuma 1 liter minyak jelantah yang dibuang ke got bisa bikin 1 juta liter air tercemar. Serem kan?',
-                color: 'from-blue-500 to-cyan-500',
-                bg: 'from-blue-50 to-cyan-50',
               },
               {
-                emoji: '🌱',
+                icon: Leaf,
                 highlight: '2-3 Bulan',
                 desc: 'Sampah organik cuma perlu 2-3 bulan buat jadi kompos. Lumayan banget buat tanaman di pekarangan rumah.',
-                color: 'from-emerald-500 to-teal-500',
-                bg: 'from-emerald-50 to-teal-50',
               },
               {
-                emoji: '🔋',
-                highlight: '1 Baterai',
+                icon: Sparkles,
+                highlight: '1 Baterai Bekas',
                 desc: 'Satu baterai bekas aja bisa bikin tanah seluas 1 meter persegi tercemar selama 50 tahun. Jangan buang sembarangan!',
-                color: 'from-purple-500 to-indigo-500',
-                bg: 'from-purple-50 to-indigo-50',
               },
-            ].map(({ emoji, highlight, desc, color, bg }, i) => (
+            ].map(({ icon: IconComponent, highlight, desc }, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`bg-gradient-to-br ${bg} rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:shadow-gray-900/5 transition-all duration-300 group hover:-translate-y-1`}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="bg-white rounded-2xl p-7 border border-stone-200/80 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="text-3xl mb-3">{emoji}</div>
-                <div className={`text-2xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent font-display mb-2`}>
-                  {highlight}
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-5">
+                    <IconComponent className="w-5 h-5" />
+                  </div>
+                  <div className="text-2xl font-bold text-slate-900 font-display mb-2">
+                    {highlight}
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </div>
@@ -211,90 +204,82 @@ export default function Home() {
       </section>
 
       {/* Tips Harian Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white border-t border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             {...fadeInUp}
             whileInView={fadeInUp.animate}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="mb-14 max-w-xl"
           >
-            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
-              🌿 Tips Praktis
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-display">
+            <div className="flex items-center gap-2 text-emerald-800 font-semibold text-sm tracking-wide uppercase mb-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              <span>Panduan Kebiasaan Baik</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display">
               Tips Harian untuk Warga
             </h2>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+            <p className="mt-3 text-slate-600 text-base leading-relaxed">
               Hal-hal kecil yang kalau rutin dilakukan, dampaknya besar banget buat lingkungan kita.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                num: '01',
+                num: '1',
                 title: 'Pilah Sampah dari Rumah',
                 desc: 'Cukup siapin 2 tempat sampah di rumah — satu buat sisa makanan dan daun, satu lagi buat plastik, kertas, dan botol.',
-                icon: '🗂️',
               },
               {
-                num: '02',
+                num: '2',
                 title: 'Bawa Tas Belanja Sendiri',
                 desc: 'Kalau mau ke warung atau pasar, bawa tas kain dari rumah. Selain hemat, juga ngurangin plastik.',
-                icon: '🛍️',
               },
               {
-                num: '03',
+                num: '3',
                 title: 'Olah Sisa Dapur Jadi Kompos',
                 desc: 'Sisa sayur, kulit buah, nasi basi jangan langsung dibuang. Kumpulin, bisa jadi kompos atau pupuk cair.',
-                icon: '🌿',
               },
               {
-                num: '04',
+                num: '4',
                 title: 'Hemat Air Bersih',
                 desc: 'Pakai air secukupnya aja. Kalau hujan, tampung airnya buat nyiram tanaman.',
-                icon: '💧',
               },
               {
-                num: '05',
-                title: 'Buang Minyak Jelantah dengan Benar',
+                num: '5',
+                title: 'Buang Minyak Jelantah Benar',
                 desc: 'Minyak bekas goreng jangan dibuang ke got. Bisa dikumpulin dan disetor ke bank sampah, atau diolah jadi sabun.',
-                icon: '🫗',
               },
               {
-                num: '06',
+                num: '6',
                 title: 'Manfaatkan Barang Bekas',
                 desc: 'Botol bekas bisa jadi pot, karton bisa jadi tempat simpan barang. Tinggal kreatif aja!',
-                icon: '♻️',
               },
               {
-                num: '07',
+                num: '7',
                 title: 'Jaga Kebersihan Selokan',
                 desc: 'Sempetin bersihin selokan depan rumah biar nggak mampet dan nggak jadi sarang nyamuk.',
-                icon: '🏠',
               },
               {
-                num: '08',
+                num: '8',
                 title: 'Ajak Keluarga & Tetangga',
                 desc: 'Ngajak tetangga dan keluarga buat bareng-bareng jaga kebersihan itu penting. Kan nggak seru kalau sendirian.',
-                icon: '🤝',
               },
-            ].map(({ num, title, desc, icon }, i) => (
+            ].map(({ num, title, desc }, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="relative bg-gradient-to-br from-green-50 to-cream-50 rounded-2xl p-6 border border-green-100/50 hover:shadow-lg hover:shadow-green-900/5 transition-all duration-300 group hover:-translate-y-1"
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="bg-[#FAFAFA] rounded-2xl p-6 border border-stone-200/70 hover:border-emerald-300 hover:bg-white transition-all duration-200"
               >
-                <div className="absolute top-4 right-4 text-3xl font-bold text-green-100 font-display group-hover:text-green-200 transition-colors duration-300">
+                <div className="w-8 h-8 rounded-full bg-emerald-800 text-white font-bold text-xs flex items-center justify-center mb-4">
                   {num}
                 </div>
-                <div className="text-2xl mb-3">{icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2 pr-8">{title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                <h3 className="font-bold text-slate-900 text-base mb-2">{title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </div>
