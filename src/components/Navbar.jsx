@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Recycle, Home, Info, FileCheck, Phone } from 'lucide-react';
+import { Menu, X, Recycle, Home, Info, FileCheck } from 'lucide-react';
 
 const navLinks = [
   { to: '/', label: 'Beranda', icon: Home },
   { to: '/about', label: 'Tentang', icon: Info },
   { to: '/plants', label: 'Program', icon: FileCheck },
-  { to: '/contact', label: 'Kontak', icon: Phone },
 ];
 
 export default function Navbar() {

@@ -4,7 +4,6 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Plants from '../pages/Plants';
 import PlantDetail from '../pages/PlantDetail';
-import Contact from '../pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +14,6 @@ const router = createBrowserRouter([
       { path: 'about', element: <About /> },
       { path: 'plants', element: <Plants /> },
       { path: 'plants/:slug', element: <PlantDetail /> },
-      { path: 'contact', element: <Contact /> },
     ],
   },
 ]);
