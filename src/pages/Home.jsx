@@ -126,7 +126,180 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tahukah Kamu Section */}
+      <section className="py-20 bg-cream-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            {...fadeInUp}
+            whileInView={fadeInUp.animate}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-medium mb-4">
+              💡 Fakta Menarik
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-display">
+              Tahukah Kamu?
+            </h2>
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Fakta-fakta menarik seputar sampah dan lingkungan yang perlu kamu ketahui.
+            </p>
+          </motion.div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                emoji: '🛍️',
+                highlight: '500 Tahun',
+                desc: 'Waktu yang dibutuhkan satu kantong plastik untuk terurai di alam. Yuk, beralih ke tas belanja kain!',
+                color: 'from-red-500 to-orange-500',
+                bg: 'from-red-50 to-orange-50',
+              },
+              {
+                emoji: '🗑️',
+                highlight: '64 Juta Ton',
+                desc: 'Jumlah sampah yang dihasilkan Indonesia setiap tahunnya. Pemilahan dari rumah bisa mengurangi volume sampah secara signifikan.',
+                color: 'from-amber-500 to-yellow-500',
+                bg: 'from-amber-50 to-yellow-50',
+              },
+              {
+                emoji: '♻️',
+                highlight: '60%',
+                desc: 'Sampah rumah tangga di Indonesia adalah sampah organik yang bisa diolah menjadi kompos atau pupuk cair (POC).',
+                color: 'from-green-500 to-emerald-500',
+                bg: 'from-green-50 to-emerald-50',
+              },
+              {
+                emoji: '💧',
+                highlight: '1 Liter',
+                desc: 'Minyak jelantah yang dibuang sembarangan bisa mencemari hingga 1 juta liter air bersih.',
+                color: 'from-blue-500 to-cyan-500',
+                bg: 'from-blue-50 to-cyan-50',
+              },
+              {
+                emoji: '🌱',
+                highlight: '2-3 Bulan',
+                desc: 'Waktu yang dibutuhkan sampah organik untuk menjadi kompos siap pakai jika diolah dengan benar.',
+                color: 'from-emerald-500 to-teal-500',
+                bg: 'from-emerald-50 to-teal-50',
+              },
+              {
+                emoji: '🔋',
+                highlight: '1 Baterai',
+                desc: 'Satu baterai bekas yang dibuang sembarangan bisa mencemari tanah seluas 1 meter persegi selama 50 tahun.',
+                color: 'from-purple-500 to-indigo-500',
+                bg: 'from-purple-50 to-indigo-50',
+              },
+            ].map(({ emoji, highlight, desc, color, bg }, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`bg-gradient-to-br ${bg} rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:shadow-gray-900/5 transition-all duration-300 group hover:-translate-y-1`}
+              >
+                <div className="text-3xl mb-3">{emoji}</div>
+                <div className={`text-2xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent font-display mb-2`}>
+                  {highlight}
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tips Harian Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            {...fadeInUp}
+            whileInView={fadeInUp.animate}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+              🌿 Tips Praktis
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-display">
+              Tips Harian untuk Warga
+            </h2>
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Langkah-langkah sederhana yang bisa dilakukan setiap hari untuk menjaga lingkungan desa tetap bersih dan sehat.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                num: '01',
+                title: 'Pilah Sampah dari Rumah',
+                desc: 'Sediakan minimal 2 tempat sampah di rumah: untuk sampah organik (sisa makanan, daun) dan anorganik (plastik, kertas, botol).',
+                icon: '🗂️',
+              },
+              {
+                num: '02',
+                title: 'Bawa Tas Belanja Sendiri',
+                desc: 'Biasakan membawa totebag atau tas kain saat berbelanja ke warung atau pasar untuk mengurangi penggunaan plastik.',
+                icon: '🛍️',
+              },
+              {
+                num: '03',
+                title: 'Olah Sisa Dapur Jadi Kompos',
+                desc: 'Kumpulkan sisa sayuran, kulit buah, dan nasi basi untuk dijadikan kompos atau pupuk organik cair (POC).',
+                icon: '🌿',
+              },
+              {
+                num: '04',
+                title: 'Hemat Air Bersih',
+                desc: 'Gunakan air secukupnya saat mencuci dan mandi. Tampung air hujan untuk menyiram tanaman.',
+                icon: '💧',
+              },
+              {
+                num: '05',
+                title: 'Buang Minyak Jelantah dengan Benar',
+                desc: 'Jangan buang minyak bekas ke saluran air. Kumpulkan dan setor ke bank sampah atau olah jadi sabun.',
+                icon: '🫗',
+              },
+              {
+                num: '06',
+                title: 'Manfaatkan Barang Bekas',
+                desc: 'Botol plastik bisa jadi pot tanaman, karton bekas jadi tempat penyimpanan. Kreativitas mengurangi sampah!',
+                icon: '♻️',
+              },
+              {
+                num: '07',
+                title: 'Jaga Kebersihan Selokan',
+                desc: 'Rutin bersihkan selokan dan saluran air di sekitar rumah agar tidak tersumbat sampah dan mencegah banjir.',
+                icon: '🏠',
+              },
+              {
+                num: '08',
+                title: 'Ajak Keluarga & Tetangga',
+                desc: 'Lingkungan bersih dimulai dari kesadaran bersama. Ajak keluarga dan tetangga untuk peduli kebersihan.',
+                icon: '🤝',
+              },
+            ].map(({ num, title, desc, icon }, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="relative bg-gradient-to-br from-green-50 to-cream-50 rounded-2xl p-6 border border-green-100/50 hover:shadow-lg hover:shadow-green-900/5 transition-all duration-300 group hover:-translate-y-1"
+              >
+                <div className="absolute top-4 right-4 text-3xl font-bold text-green-100 font-display group-hover:text-green-200 transition-colors duration-300">
+                  {num}
+                </div>
+                <div className="text-2xl mb-3">{icon}</div>
+                <h3 className="font-semibold text-gray-900 mb-2 pr-8">{title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-cream-50">
